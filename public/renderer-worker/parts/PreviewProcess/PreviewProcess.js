@@ -1,4 +1,4 @@
-import * as Ipc from '../IpcChildWithWorker/IpcChildWithWorker.js'
+import * as IpcChildWithIframe from '../IpcChildWithIframe/IpcChildWithIframe.js'
 import * as HandleIpc from '../HandleIpc/HandleIpc.js'
 import * as JsonRpc from '../JsonRpc/JsonRpc.js'
 
@@ -10,7 +10,8 @@ export const state = {
 }
 
 export const listen = async (execute) => {
-  const ipc = await Ipc.create()
+  // TODO request message port from preview
+  const ipc = await IpcChildWithIframe.create()
   HandleIpc.handleIpc(ipc, execute)
   state.ipc = ipc
 }

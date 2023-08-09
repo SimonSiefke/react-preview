@@ -16,6 +16,10 @@ export const create = async (workerUrl) => {
   return {
     worker,
     send(message) {
+      if (message.result instanceof MessagePort) {
+        this.worker.postMessage(message, [message.result])
+        return
+      }
       this.worker.postMessage(message)
     },
     set onmessage(listener) {

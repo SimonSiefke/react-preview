@@ -1,2 +1,3 @@
-const root = ReactDOM.createRoot(document.getElementById('app'))
-root.render(React.createElement('h1', null, ['hello from react']))
+import * as Main from './parts/Main/Main.js'
+
+Main.main()
