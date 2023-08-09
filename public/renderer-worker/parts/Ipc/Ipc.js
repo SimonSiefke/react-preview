@@ -1,4 +1,5 @@
-export const create = () => {
+export const create = async () => {
+  globalThis.postMessage('ready')
   return {
     global: globalThis,
     send(message) {
