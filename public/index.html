@@ -4,12 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Title</title>
+    <link rel="stylesheet" href="index.css" />
     <script
       type="module"
       src="./renderer-process/rendererProcessMain.js"
     ></script>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <h1>React Preview</h1>
+    <div class="App">
+      <textarea class="Code" cols="30" rows="10"></textarea>
+      <iframe
+        class="Preview"
+        sandbox="allow-scripts allow-same-origin"
+        src="preview.html"
+      ></iframe>
+    </div>
   </body>
 </html>
