@@ -8,5 +8,6 @@ const root = path.join(__dirname, '..')
 const dist = join(root, 'dist')
 await rm(dist, { recursive: true, force: true })
 await mkdir(dist, { recursive: true })
+const publicFolder = join(root, 'public')
 
-await cp(join(root, 'index.html'), join(dist, 'index.html'))
+await cp(join(root, 'index.html'), join(publicFolder, 'index.html'))
