@@ -2,6 +2,8 @@
 
 > Simple preview for single file react components powered by WebWorkers.
 
+![demo](./demo.png)
+
 ```sh
 git clone git@github.com:SimonSiefke/react-preview.git &&
 cd react-preview &&
