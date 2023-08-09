@@ -1,0 +1,19 @@
+{
+  "name": "react-preview",
+  "version": "0.0.0-dev",
+  "description": "Simple preview for single file react components powered by WebWorkers.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "test": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.4.9",
+    "prettier": "^3.0.1",
+    "typescript": "^5.1.6"
+  }
+}
