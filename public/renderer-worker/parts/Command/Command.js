@@ -1,1 +1,6 @@
-export const execute = (method, ...params) => {}
+import * as CommandMap from '../CommandMap/CommandMap.js'
+
+export const execute = (method, ...params) => {
+  const fn = CommandMap.getFn(method)
+  return fn(...params)
+}

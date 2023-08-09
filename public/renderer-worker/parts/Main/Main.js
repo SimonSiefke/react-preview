@@ -7,6 +7,7 @@ import * as PreviewContent from '../PreviewContent/PreviewContent.js'
 export const main = async () => {
   await RendererProcess.listen(Command.execute)
   await PreviewProcess.listen(Command.execute)
+  await Content.hydrate()
   const content = 'test content'
   await Content.set(content)
   await PreviewContent.set(content)

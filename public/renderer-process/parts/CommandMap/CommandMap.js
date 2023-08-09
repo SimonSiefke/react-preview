@@ -5,6 +5,8 @@ export const getFn = (method) => {
   switch (method) {
     case 'Content.set':
       return Content.set
+    case 'Content.hydrate':
+      return Content.hydrate
     case 'IpcChildWithIframe.create':
       return IpcChildWithIframe.create
     default:
