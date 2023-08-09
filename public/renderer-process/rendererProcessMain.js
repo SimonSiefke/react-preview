@@ -1,9 +1,3 @@
-const workerUrl = new URL(
-  '../renderer-worker/rendererWorkerMain.js',
-  import.meta.url,
-).toString()
+import * as Main from './parts/Main/Main.js'
 
-const worker = new Worker(workerUrl, {
-  type: 'module',
-  name: 'Renderer Worker',
-})
+Main.main()

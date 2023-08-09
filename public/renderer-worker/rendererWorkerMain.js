@@ -1,1 +1,3 @@
-console.log('hello from worker')
+import * as Main from './parts/Main/Main.js'
+
+Main.main()
