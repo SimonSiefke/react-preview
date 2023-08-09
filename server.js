@@ -2,12 +2,14 @@ import express from 'express'
 import { createServer } from 'node:http'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import cors from 'cors'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = __dirname
 const publicFolder = join(root, 'public')
 
 const app = express()
+app.use(cors())
 app.use(express.static(publicFolder))
 
 const handleListening = () => {
