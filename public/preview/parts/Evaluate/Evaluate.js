@@ -1,3 +1,4 @@
-export const evaluate = (code) => {
-  eval(code)
+export const evaluate = async (code) => {
+  const x = await import(code)
+  // eval(code)
 }

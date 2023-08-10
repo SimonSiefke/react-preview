@@ -17,5 +17,5 @@ export const main = async () => {
   await PreviewProcess.listen(Command.execute)
   await Content.hydrate()
   await Content.set(content)
-  await PreviewContent.evaluate(content)
+  await Content.handleChange(content)
 }
